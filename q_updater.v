@@ -1,22 +1,27 @@
-module q_updater(input_Q, Q_max, gamma, alpha, reward, Q_new);
-    input [15:0] input_Q;
-    input [15:0] Q_max;
-    input [3:0]gamma;
-    input [3:0] alpha;
-    input [15:0] reward;
-    output [15:0] Q_new;
+module Q_updater(Q,max_Q,gamma,alfa,reward,Q_new, eq_1, eq_2, eq_3);
 
-    reg [3:0] input_gamma = gamma;
-    reg [15:0] input_max_Q = Q_max;
-    reg [3:0] input_alpha = alpha;
-    reg [15:0] eq_1;
-    wire [15:0] output_gamma_max_Q;
-    wire [15:0] output_eq_1;
-    eq_1 = output_gamma_max_Q + reward - input_Q;
-    
-    barrel_shifter_16bit multiply1(.in(input_max_Q), .ctrl(input_gamma), .out(output_gamma_max_Q));
-    barrel_shifter_16bit multiply1(.in(eq_1), .ctrl(alpha), .out(output_eq_1));
-    
-    assign Q_new = output_eq_1 + input_Q;
+input [15:0] Q;
+input [3:0] gamma;
+input [3:0] alfa;
+input [15:0] reward;
+input [15:0] max_Q;
+output [15:0] Q_new;
+output [15:0] eq_1;
+output [15:0] eq_2;
+output [15:0] eq_3;
 
-endmodule 
+wire [15:0] gamma_maxQ;
+wire [15:0] r_plus_gammamaxQ_min_Q;
+wire [15:0] alfa_kali_r_plus_gammamaxQ_min_Q;
+
+barrel_shifter_16bit utt_1(.in(max_Q),.ctrl(gamma),.out(gamma_maxQ));
+barrel_shifter_16bit utt_2(.in(r_plus_gammamaxQ_min_Q),.ctrl(alfa),.out(alfa_kali_r_plus_gammamaxQ_min_Q));
+
+assign eq_1 = gamma_maxQ;
+assign eq_2 = r_plus_gammamaxQ_min_Q;
+assign eq_3 = alfa_kali_r_plus_gammamaxQ_min_Q;
+assign r_plus_gammamaxQ_min_Q = reward + gamma_maxQ - Q;
+assign Q_new = Q + alfa_kali_r_plus_gammamaxQ_min_Q;
+
+
+endmodule

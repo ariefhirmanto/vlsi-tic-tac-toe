@@ -5,10 +5,9 @@ module action_ram(clock, read_address, d_in, write_address, write_enable, d_out)
     output reg [15:0] d_out;
 
     reg [15:0] memory_data [0:255];
-    integer i;
 
     initial begin
-        $readmemh("memory.list", memory_data);
+        $readmemh("mem_in.list", memory_data);
     end
 
     always @(posedge clock) begin
