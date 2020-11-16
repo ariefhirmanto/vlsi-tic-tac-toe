@@ -1,9 +1,9 @@
 // File     : action_ram.v
 // Brief    : modul for memory management
 
-module action_ram(clock, write_address, d_in, read_address, write_enable, d_out);
+module action_ram(clock, write_enable, write_address, d_in, read_address, d_out);
     input write_enable, clock;
-    input [7:0] read_address, write_address;
+    input [15:0] read_address, write_address;
     input [15:0] d_in;
     output reg [15:0] d_out;
     // model memory
@@ -19,11 +19,10 @@ module action_ram(clock, write_address, d_in, read_address, write_enable, d_out)
         if(write_enable == 1) begin
             memory_data[write_address] = d_in;
             // write memory to file
-            $writememh("memory_out.list", memory_data, 8'h0, 8'h255);
+            $writememh("memory_out.list", memory_data, 16'd0, 16'd19583);
         end
-        else begin
-            d_out = memory_data[read_address];
-        end
+        d_out = memory_data[read_address];
+
         // debugging
         $display("isi memory");
         for(i=0; i<9; i=i+1) begin

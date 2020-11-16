@@ -7,9 +7,9 @@ module action_ram_tb ();
     reg [15:0] d_in;
     wire [15:0] d_out;
 
-    action_ram uut (.clock(clock), .write_address(write_address),
-                    .d_in(d_in), .read_address(read_address),
-                    .write_enable(write_enable), .d_out(d_out)
+    action_ram uut (.clock(clock), .write_enable(write_enable), 
+                    .write_address(write_address), .d_in(d_in), 
+                    .read_address(read_address), .d_out(d_out)
     );
     
     initial begin
