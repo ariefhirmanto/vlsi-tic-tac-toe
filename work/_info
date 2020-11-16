@@ -9,26 +9,26 @@ z2
 cModel Technology
 dC:/intelFPGA_pro/18.1
 vaction_ram
-Z0 !s110 1605567446
+Z0 !s110 1605568670
 !i10b 1
 !s100 i2GLlCS[cz]<9Ef8cWNGi3
 ID5i0:;:NYUj:g_M55En1Q1
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dZ:/VLSI_verilog/vlsi-tic-tac-toe
-w1605565036
+Z3 w1605568200
 8Z:/VLSI_verilog/vlsi-tic-tac-toe/action_ram.v
 FZ:/VLSI_verilog/vlsi-tic-tac-toe/action_ram.v
 L0 4
-Z3 OP;L;10.4a;61
+Z4 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z4 !s108 1605567446.000000
+Z5 !s108 1605568670.000000
 !s107 Z:/VLSI_verilog/vlsi-tic-tac-toe/action_ram.v|
 !s90 -reportprogress|300|-work|work|-stats=none|Z:/VLSI_verilog/vlsi-tic-tac-toe/action_ram.v|
 !s101 -O0
 !i113 1
-Z5 o-work work -O0
+Z6 o-work work -O0
 vaction_ram_tb
 R0
 !i10b 1
@@ -36,252 +36,274 @@ R0
 IG7oXSlU>5RCFLeOabfKGk3
 R1
 R2
-w1605565012
+R3
 8Z:/VLSI_verilog/vlsi-tic-tac-toe/action_ram_tb.v
 FZ:/VLSI_verilog/vlsi-tic-tac-toe/action_ram_tb.v
 L0 4
-R3
+R4
 r1
 !s85 0
 31
-R4
+R5
 !s107 Z:/VLSI_verilog/vlsi-tic-tac-toe/action_ram_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|Z:/VLSI_verilog/vlsi-tic-tac-toe/action_ram_tb.v|
 !s101 -O0
 !i113 1
-R5
+R6
 vdecoder
-Z6 !s110 1605567447
+R0
 !i10b 1
 !s100 caCU@ooL_4Y]QV?SR=P<61
 I>5jKEg6Be?FEAA14oa69M2
 R1
 R2
-w1605564518
+R3
 8Z:/VLSI_verilog/vlsi-tic-tac-toe/decoder.v
 FZ:/VLSI_verilog/vlsi-tic-tac-toe/decoder.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-Z7 !s108 1605567447.000000
+R5
 !s107 Z:/VLSI_verilog/vlsi-tic-tac-toe/decoder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|Z:/VLSI_verilog/vlsi-tic-tac-toe/decoder.v|
 !s101 -O0
 !i113 1
-R5
-vdecoder_tb
 R6
+vdecoder_tb
+Z7 !s110 1605568671
 !i10b 1
 !s100 >XcR=LTblP6:bdc;oEoMB1
 IB96Jni<F79Q?4R_`D[Fdo3
 R1
 R2
-w1605564538
+R3
 8Z:/VLSI_verilog/vlsi-tic-tac-toe/decoder_tb.v
 FZ:/VLSI_verilog/vlsi-tic-tac-toe/decoder_tb.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R7
+Z8 !s108 1605568671.000000
 !s107 Z:/VLSI_verilog/vlsi-tic-tac-toe/decoder_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|Z:/VLSI_verilog/vlsi-tic-tac-toe/decoder_tb.v|
 !s101 -O0
 !i113 1
-R5
-vdelay
 R6
+vdelay
+R0
 !i10b 1
 !s100 bbbN51:1oRVV9T1`ZCS>E3
 IU@KK1[E5R_nXMEdE^31XO2
 R1
 R2
-w1605563030
+R3
 8Z:/VLSI_verilog/vlsi-tic-tac-toe/delay.v
 FZ:/VLSI_verilog/vlsi-tic-tac-toe/delay.v
 L0 4
-R3
+R4
 r1
 !s85 0
 31
-R4
+R5
 !s107 Z:/VLSI_verilog/vlsi-tic-tac-toe/delay.v|
 !s90 -reportprogress|300|-work|work|-stats=none|Z:/VLSI_verilog/vlsi-tic-tac-toe/delay.v|
 !s101 -O0
 !i113 1
-R5
-vdelay_tb
 R6
+vdelay_tb
+R0
 !i10b 1
 !s100 AO^DlmLZ[bmm0^zRR3bI63
 I1PUjK7X6Gd_nh;=M99z640
 R1
 R2
-w1605563659
+R3
 8Z:/VLSI_verilog/vlsi-tic-tac-toe/delay_tb.v
 FZ:/VLSI_verilog/vlsi-tic-tac-toe/delay_tb.v
 L0 4
-R3
+R4
 r1
 !s85 0
 31
-R7
+R5
 !s107 Z:/VLSI_verilog/vlsi-tic-tac-toe/delay_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|Z:/VLSI_verilog/vlsi-tic-tac-toe/delay_tb.v|
 !s101 -O0
 !i113 1
-R5
-vmax_modul
 R6
+vmax_modul
+R7
 !i10b 1
 !s100 c5NlTd2P_GWKH?>8bEj9F0
 I<6mRSREakcC`EDEzl_?;12
 R1
 R2
-Z8 w1605566520
+R3
 Z9 8Z:/VLSI_verilog/vlsi-tic-tac-toe/max_Q.v
 Z10 FZ:/VLSI_verilog/vlsi-tic-tac-toe/max_Q.v
 L0 32
-R3
+R4
 r1
 !s85 0
 31
-R7
+R8
 Z11 !s107 Z:/VLSI_verilog/vlsi-tic-tac-toe/max_Q.v|
 Z12 !s90 -reportprogress|300|-work|work|-stats=none|Z:/VLSI_verilog/vlsi-tic-tac-toe/max_Q.v|
 !s101 -O0
 !i113 1
-R5
-vmax_Q
 R6
+vmax_Q
+R7
 !i10b 1
 !s100 ^]ZAzJcC<o:`<Q[cF<@XT0
 II1IngdoI@;UdaJiMk7RaW0
 R1
 R2
-R8
+R3
 R9
 R10
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R7
+R8
 R11
 R12
 !s101 -O0
 !i113 1
-R5
+R6
 nmax_@q
 vmax_Q_tb
-R6
+R7
 !i10b 1
 !s100 akmbmO9nAh7D^=?4VWK3]1
 Inz?[]o>P0ba=o>aO6O4ci0
 R1
 R2
-w1605566574
+R3
 8Z:/VLSI_verilog/vlsi-tic-tac-toe/max_Q_tb.v
 FZ:/VLSI_verilog/vlsi-tic-tac-toe/max_Q_tb.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R7
+R8
 !s107 Z:/VLSI_verilog/vlsi-tic-tac-toe/max_Q_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|Z:/VLSI_verilog/vlsi-tic-tac-toe/max_Q_tb.v|
 !s101 -O0
 !i113 1
-R5
+R6
 nmax_@q_tb
 vmux
-R6
+R7
 !i10b 1
 !s100 cH[O03S2IK5JJKW0[k4YO3
 IKf9641b:8Q70GnDeUIF_W2
 R1
 R2
-w1605565305
+R3
 8Z:/VLSI_verilog/vlsi-tic-tac-toe/mux.v
 FZ:/VLSI_verilog/vlsi-tic-tac-toe/mux.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R7
+R8
 !s107 Z:/VLSI_verilog/vlsi-tic-tac-toe/mux.v|
 !s90 -reportprogress|300|-work|work|-stats=none|Z:/VLSI_verilog/vlsi-tic-tac-toe/mux.v|
 !s101 -O0
 !i113 1
-R5
-vmux_tb
 R6
+vmux_tb
+R7
 !i10b 1
 !s100 Eff5NiNgQcYEOPzfZ07@U2
 IESkZ=_6a<_18@IR10<df10
 R1
 R2
-w1605565656
+R3
 8Z:/VLSI_verilog/vlsi-tic-tac-toe/mux_tb.v
 FZ:/VLSI_verilog/vlsi-tic-tac-toe/mux_tb.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R7
+R8
 !s107 Z:/VLSI_verilog/vlsi-tic-tac-toe/mux_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|Z:/VLSI_verilog/vlsi-tic-tac-toe/mux_tb.v|
 !s101 -O0
 !i113 1
-R5
+R6
+vQ_learning
+R7
+!i10b 1
+!s100 mJl4@LG?2WIKOAFEA8KgR1
+IMQahaDh<zGMA@bcQmJh>;3
+R1
+R2
+w1605568588
+8Z:/VLSI_verilog/vlsi-tic-tac-toe/Q_learning.v
+FZ:/VLSI_verilog/vlsi-tic-tac-toe/Q_learning.v
+L0 4
+R4
+r1
+!s85 0
+31
+R8
+!s107 Z:/VLSI_verilog/vlsi-tic-tac-toe/Q_learning.v|
+!s90 -reportprogress|300|-work|work|-stats=none|Z:/VLSI_verilog/vlsi-tic-tac-toe/Q_learning.v|
+!s101 -O0
+!i113 1
+R6
+n@q_learning
 vQ_updater
-Z13 !s110 1605567448
+R7
 !i10b 1
 !s100 BPnRRG9MLTLf[f8Xm0zDG2
 ISX1XI05UhHFCnQKLIX78g1
 R1
 R2
-w1605567133
+w1605568646
 8Z:/VLSI_verilog/vlsi-tic-tac-toe/Q_updater.v
 FZ:/VLSI_verilog/vlsi-tic-tac-toe/Q_updater.v
 L0 4
-R3
+R4
 r1
 !s85 0
 31
-R7
+R8
 !s107 Z:/VLSI_verilog/vlsi-tic-tac-toe/Q_updater.v|
 !s90 -reportprogress|300|-work|work|-stats=none|Z:/VLSI_verilog/vlsi-tic-tac-toe/Q_updater.v|
 !s101 -O0
 !i113 1
-R5
+R6
 n@q_updater
 vQ_updater_tb
-R13
+R7
 !i10b 1
 !s100 A6R@PDohBIJ<lS1E6F?iB0
 IKSBFa7J0QTURY`TgYMj5g1
 R1
 R2
-w1605567431
+R3
 8Z:/VLSI_verilog/vlsi-tic-tac-toe/Q_updater_tb.v
 FZ:/VLSI_verilog/vlsi-tic-tac-toe/Q_updater_tb.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-!s108 1605567448.000000
+R8
 !s107 Z:/VLSI_verilog/vlsi-tic-tac-toe/Q_updater_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|Z:/VLSI_verilog/vlsi-tic-tac-toe/Q_updater_tb.v|
 !s101 -O0
 !i113 1
-R5
+R6
 n@q_updater_tb
