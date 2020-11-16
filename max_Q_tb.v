@@ -1,16 +1,16 @@
 module max_Q_tb;
 
-reg [15:0] input_1;
-reg [15:0] input_2;
-reg [15:0] input_3;
-reg [15:0] input_4;
-reg [15:0] input_5;
-reg [15:0] input_6;
-reg [15:0] input_7;
-reg [15:0] input_8;
-reg [15:0] input_9;
+reg [7:0] input_1;
+reg [7:0] input_2;
+reg [7:0] input_3;
+reg [7:0] input_4;
+reg [7:0] input_5;
+reg [7:0] input_6;
+reg [7:0] input_7;
+reg [7:0] input_8;
+reg [7:0] input_9;
 
-wire [15:0] keluaran;
+wire [7:0] keluaran;
 
 max_Q uut (.input_1(input_1),.input_2(input_2),
             .input_3(input_3),.input_4(input_4),
@@ -22,15 +22,25 @@ max_Q uut (.input_1(input_1),.input_2(input_2),
         begin
             $display($time, " << Starting the Simulation >>");
             #100
-            input_1 = 16'd1;
-            input_2 = 16'd272;
-            input_3 = 16'd3;
-            input_4 = 16'd4;
-            input_5 = 16'd5;
-            input_6 = 16'd6;
-            input_7 = 16'd7;
-            input_8 = 16'd8;
-            input_9 = 16'd9;
+            input_1 = 8'd1;
+            input_2 = 8'd212;
+            input_3 = 8'd3;
+            input_4 = 8'd4;
+            input_5 = 8'd5;
+            input_6 = 8'd6;
+            input_7 = 8'd7;
+            input_8 = 8'd8;
+            input_9 = 8'd9;
+            #100
+            input_1 = 8'd1;
+            input_2 = 8'd22;
+            input_3 = 8'd3;
+            input_4 = 8'd45;
+            input_5 = 8'd5;
+            input_6 = 8'd6;
+            input_7 = 8'd7;
+            input_8 = 8'd8;
+            input_9 = 8'd9;
             
         end
 

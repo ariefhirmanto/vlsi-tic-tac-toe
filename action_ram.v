@@ -3,11 +3,11 @@
 
 module action_ram(clock, write_enable, write_address, d_in, read_address, d_out);
     input write_enable, clock;
-    input [15:0] read_address, write_address;
-    input [15:0] d_in;
-    output reg [15:0] d_out;
+    input [17:0] read_address, write_address;
+    input [7:0] d_in;
+    output reg [7:0] d_out;
     // model memory
-    reg [15:0] memory_data [0:255];
+    reg [17:0] memory_data [0:255];
     integer i;
 
     initial begin
@@ -19,7 +19,7 @@ module action_ram(clock, write_enable, write_address, d_in, read_address, d_out)
         if(write_enable == 1) begin
             memory_data[write_address] = d_in;
             // write memory to file
-            $writememh("memory_out.list", memory_data, 16'd0, 16'd19583);
+            $writememh("mem_out.list", memory_data, 17'd0, 17'd262144);
         end
         d_out = memory_data[read_address];
 

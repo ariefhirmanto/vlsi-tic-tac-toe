@@ -1,17 +1,1 @@
-Z:/VLSI_verilog/vlsi-tic-tac-toe/action_ram.v {2 {vlog -work work -stats=none Z:/VLSI_verilog/vlsi-tic-tac-toe/action_ram.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module action_ram
-** Warning: Z:/VLSI_verilog/vlsi-tic-tac-toe/action_ram.v(22): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 
-
-Top level modules:
-	action_ram
-
-} {} {}} Z:/VLSI_verilog/vlsi-tic-tac-toe/action_ram_tb.v {1 {vlog -work work -stats=none Z:/VLSI_verilog/vlsi-tic-tac-toe/action_ram_tb.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module action_ram_tb
-
-Top level modules:
-	action_ram_tb
-
-} {} {}}
