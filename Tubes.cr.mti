@@ -1,16 +1,9 @@
-C:/intelFPGA_pro/18.1/work/tubes/q_updater.v {1 {vlog -work work -stats=none C:/intelFPGA_pro/18.1/work/tubes/q_updater.v
+C:/intelFPGA_pro/18.1/work/tubes/action_ram.v {1 {vlog -work work -stats=none C:/intelFPGA_pro/18.1/work/tubes/action_ram.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module Q_updater
+-- Compiling module action_ram
 
 Top level modules:
-	Q_updater
-
-} {} {}} C:/Users/IMAN/Downloads/Q_updater_tb.v {1 {vlog -work work -stats=none C:/Users/IMAN/Downloads/Q_updater_tb.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module Q_updater_tb
-
-Top level modules:
-	Q_updater_tb
+	action_ram
 
 } {} {}} C:/intelFPGA_pro/18.1/work/tubes/barrelshifter.v {1 {vlog -work work -stats=none {C:\intelFPGA_pro\18.1\work\tubes\barrelshifter.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -20,20 +13,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	barrel_shifter_16bit
 
-} {} {}} C:/intelFPGA_pro/18.1/work/tubes/action_ram.v {1 {vlog -work work -stats=none C:/intelFPGA_pro/18.1/work/tubes/action_ram.v
+} {} {}} C:/Users/IMAN/Downloads/Q_updater_tb.v {1 {vlog -work work -stats=none C:/Users/IMAN/Downloads/Q_updater_tb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module action_ram
+-- Compiling module Q_updater_tb
 
 Top level modules:
-	action_ram
+	Q_updater_tb
 
-} {} {}} C:/intelFPGA_pro/18.1/work/tubes/max_Q.v {1 {vlog -work work -stats=none C:/intelFPGA_pro/18.1/work/tubes/max_Q.v
+} {} {}} C:/intelFPGA_pro/18.1/work/tubes/q_updater.v {1 {vlog -work work -stats=none C:/intelFPGA_pro/18.1/work/tubes/q_updater.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module max_Q
--- Compiling module max_modul
+-- Compiling module Q_updater
 
 Top level modules:
-	max_Q
+	Q_updater
+
+} {} {}} C:/intelFPGA_pro/18.1/work/tubes/action_ram_tb.v {1 {vlog -work work -stats=none C:/intelFPGA_pro/18.1/work/tubes/action_ram_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module action_ram_tb
+
+Top level modules:
+	action_ram_tb
 
 } {} {}} C:/intelFPGA_pro/18.1/work/tubes/barrelshifter_tb.v {1 {vlog -work work -stats=none {C:\intelFPGA_pro\18.1\work\tubes\barrelshifter_tb.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -42,12 +41,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	barrel_shifter_16bit_tb
 
-} {} {}} C:/intelFPGA_pro/18.1/work/tubes/action_ram_tb.v {1 {vlog -work work -stats=none C:/intelFPGA_pro/18.1/work/tubes/action_ram_tb.v
+} {} {}} C:/intelFPGA_pro/18.1/work/tubes/max_Q.v {1 {vlog -work work -stats=none C:/intelFPGA_pro/18.1/work/tubes/max_Q.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module action_ram_tb
+-- Compiling module max_Q
+-- Compiling module max_modul
 
 Top level modules:
-	action_ram_tb
+	max_Q
 
 } {} {}} C:/intelFPGA_pro/18.1/work/tubes/max_Q_tb.v {1 {vlog -work work -stats=none C:/intelFPGA_pro/18.1/work/tubes/max_Q_tb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
