@@ -47,13 +47,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	Q_updater_tb
 
-} {} {}} Z:/VLSI_verilog/vlsi-tic-tac-toe/mux.v {1 {vlog -work work -stats=none Z:/VLSI_verilog/vlsi-tic-tac-toe/mux.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module mux
-
-Top level modules:
-	mux
-
 } {} {}} Z:/VLSI_verilog/vlsi-tic-tac-toe/max_Q_tb.v {1 {vlog -work work -stats=none Z:/VLSI_verilog/vlsi-tic-tac-toe/max_Q_tb.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module max_Q_tb
@@ -89,5 +82,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	max_Q
+
+} {} {}} Z:/VLSI_verilog/vlsi-tic-tac-toe/Q_learning.v {1 {vlog -work work -stats=none Z:/VLSI_verilog/vlsi-tic-tac-toe/Q_learning.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Q_learning
+
+Top level modules:
+	Q_learning
 
 } {} {}}

@@ -20,32 +20,32 @@ module Q_learning(clock, action, state, next_state, reward, gamma, alfa, Q_new);
     reg [17:0] read_address, write_address;
     wire [7:0] d_out1, d_out2, d_out3, d_out4, d_out5, d_out6, d_out7, d_out8, d_out9;
     
-    action_ram ram_1 (.clock(clock), .write_enable(en1), .write_address(write_address), 
-                        .d_in(Q_new_temp), .read_address(read_address), .d_out(d_out1)
+    action_ram ram_1 (.clock(clock), .write_enable(en1), .write_address(state), 
+                        .d_in(Q_new_temp), .read_address(next_state), .d_out(d_out1)
     );
-    action_ram ram_2 (.clock(clock), .write_enable(en2), .write_address(write_address), 
-                        .d_in(Q_new_temp), .read_address(read_address), .d_out(d_out2)
+    action_ram ram_2 (.clock(clock), .write_enable(en2), .write_address(state), 
+                        .d_in(Q_new_temp), .read_address(next_state), .d_out(d_out2)
     );
-    action_ram ram_3 (.clock(clock), .write_enable(en3), .write_address(write_address), 
-                        .d_in(Q_new_temp), .read_address(read_address), .d_out(d_out3)
+    action_ram ram_3 (.clock(clock), .write_enable(en3), .write_address(state), 
+                        .d_in(Q_new_temp), .read_address(next_state), .d_out(d_out3)
     );
-    action_ram ram_4 (.clock(clock), .write_enable(en4), .write_address(write_address), 
-                        .d_in(Q_new_temp), .read_address(read_address), .d_out(d_out4)
+    action_ram ram_4 (.clock(clock), .write_enable(en4), .write_address(state), 
+                        .d_in(Q_new_temp), .read_address(next_state), .d_out(d_out4)
     );
-    action_ram ram_5 (.clock(clock), .write_enable(en5), .write_address(write_address), 
-                        .d_in(Q_new_temp), .read_address(read_address), .d_out(d_out5)
+    action_ram ram_5 (.clock(clock), .write_enable(en5), .write_address(state), 
+                        .d_in(Q_new_temp), .read_address(next_state), .d_out(d_out5)
     );
-    action_ram ram_6 (.clock(clock), .write_enable(en6), .write_address(write_address), 
-                        .d_in(Q_new_temp), .read_address(read_address), .d_out(d_out6)
+    action_ram ram_6 (.clock(clock), .write_enable(en6), .write_address(state), 
+                        .d_in(Q_new_temp), .read_address(next_state), .d_out(d_out6)
     );
-    action_ram ram_7 (.clock(clock), .write_enable(en7), .write_address(write_address), 
-                        .d_in(Q_new_temp), .read_address(read_address), .d_out(d_out7)
+    action_ram ram_7 (.clock(clock), .write_enable(en7), .write_address(state), 
+                        .d_in(Q_new_temp), .read_address(next_state), .d_out(d_out7)
     );
-    action_ram ram_8 (.clock(clock), .write_enable(en8), .write_address(write_address), 
-                        .d_in(Q_new_temp), .read_address(read_address), .d_out(d_out8)
+    action_ram ram_8 (.clock(clock), .write_enable(en8), .write_address(state), 
+                        .d_in(Q_new_temp), .read_address(next_state), .d_out(d_out8)
     );
-    action_ram ram_9 (.clock(clock), .write_enable(en9), .write_address(write_address), 
-                        .d_in(Q_new_temp), .read_address(read_address), .d_out(d_out9)
+    action_ram ram_9 (.clock(clock), .write_enable(en9), .write_address(state), 
+                        .d_in(Q_new_temp), .read_address(next_state), .d_out(d_out9)
     );
 
     // delay
