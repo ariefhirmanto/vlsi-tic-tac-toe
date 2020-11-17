@@ -1,4 +1,4 @@
 // memory data file (do not edit the following line - required for mem load use)
-// instance=/action_ram_tb/uut/memory_data(0)
+// instance=/Q_learning_tb/uut/ram_3/memory_data(0)
 // format=hex addressradix=h dataradix=h version=1.0 wordsperline=1 noaddress
 00002

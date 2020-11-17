@@ -68,6 +68,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	delay_tb
 
+} {} {}} Z:/VLSI_verilog/vlsi-tic-tac-toe/Q_learning_tb.v {1 {vlog -work work -stats=none Z:/VLSI_verilog/vlsi-tic-tac-toe/Q_learning_tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Q_learning_tb
+
+Top level modules:
+	Q_learning_tb
+
 } {} {}} Z:/VLSI_verilog/vlsi-tic-tac-toe/action_ram.v {1 {vlog -work work -stats=none Z:/VLSI_verilog/vlsi-tic-tac-toe/action_ram.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module action_ram
