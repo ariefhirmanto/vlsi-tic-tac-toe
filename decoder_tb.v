@@ -1,6 +1,6 @@
 module decoder_tb();
     reg clock;
-    reg [8:0] sel;
+    reg [3:0] sel;
     wire en1;
     wire en2;
     wire en3;

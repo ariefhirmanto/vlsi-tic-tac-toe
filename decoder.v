@@ -1,5 +1,5 @@
 module decoder(sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
-    input [8:0] sel;
+    input [3:0] sel;
     output en1;
     output en2;
     output en3;
