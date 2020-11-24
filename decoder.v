@@ -19,7 +19,7 @@ module decoder(sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
     reg en8;
     reg en9;
 
-    always @(sel)
+    always @(*)
     begin
         case(sel)
         8'd0: 

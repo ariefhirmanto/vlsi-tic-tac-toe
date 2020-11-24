@@ -27,6 +27,3 @@ module mux(sel, in1, in2, in3, in4, in5, in6, in7, in8, in9, out);
         endcase
     end
 endmodule
-endcase
-    end
-endmodule

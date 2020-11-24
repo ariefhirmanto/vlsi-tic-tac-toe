@@ -1,1 +1,0 @@
-module q_accelerator();
