@@ -4,8 +4,8 @@
 module action_ram_tb ();
     reg clock, write_enable;
     reg [17:0] read_address, write_address;
-    reg [7:0] d_in;
-    wire [7:0] d_out;
+    reg [15:0] d_in;
+    wire [15:0] d_out;
 
     action_ram uut (.clock(clock), .write_enable(write_enable), 
                     .write_address(write_address), .d_in(d_in), 
@@ -26,11 +26,11 @@ module action_ram_tb ();
         read_address = read_address + 17'd1;
         #200
         write_enable = 1;
-        d_in = 8'd12;
+        d_in = 16'd12;
         #200
         read_address = 17'd5;
         write_address = write_address + 17'd6;
-        d_in = 8'd13;
+        d_in = 16'd13;
     end
 
     always begin

@@ -22,7 +22,7 @@ module decoder(sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
     always @(*)
     begin
         case(sel)
-        8'd0: 
+        16'd0: 
             begin
                 en1 <= 1'd1;
                 en2 <= 1'd0;
@@ -34,7 +34,7 @@ module decoder(sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
                 en8 <= 1'd0;
                 en9 <= 1'd0;
             end
-        8'd1: 
+        16'd1: 
             begin
                 en1 <= 1'd0;
                 en2 <= 1'd1;
@@ -46,7 +46,7 @@ module decoder(sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
                 en8 <= 1'd0;
                 en9 <= 1'd0;
             end
-        8'd2: 
+        16'd2: 
             begin
                 en1 <= 1'd0;
                 en2 <= 1'd0;
@@ -58,7 +58,7 @@ module decoder(sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
                 en8 <= 1'd0;
                 en9 <= 1'd0;
             end
-        8'd3: 
+        16'd3: 
             begin
                 en1 <= 1'd0;
                 en2 <= 1'd0;
@@ -70,7 +70,7 @@ module decoder(sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
                 en8 <= 1'd0;
                 en9 <= 1'd0;
             end
-        8'd4: 
+        16'd4: 
             begin
                 en1 <= 1'd0;
                 en2 <= 1'd0;
@@ -82,7 +82,7 @@ module decoder(sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
                 en8 <= 1'd0;
                 en9 <= 1'd0;
             end
-        8'd5: 
+        16'd5: 
             begin
                 en1 <= 1'd0;
                 en2 <= 1'd0;
@@ -94,7 +94,7 @@ module decoder(sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
                 en8 <= 1'd0;
                 en9 <= 1'd0;
             end
-        8'd6: 
+        16'd6: 
             begin
                 en1 <= 1'd0;
                 en2 <= 1'd0;
@@ -106,7 +106,7 @@ module decoder(sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
                 en8 <= 1'd0;
                 en9 <= 1'd0;
             end
-        8'd7: 
+        16'd7: 
             begin
                 en1 <= 1'd0;
                 en2 <= 1'd0;
@@ -118,7 +118,7 @@ module decoder(sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
                 en8 <= 1'd1;
                 en9 <= 1'd0;
             end
-        8'd8: 
+        16'd8: 
             begin
                 en1 <= 1'd0;
                 en2 <= 1'd0;

@@ -5,17 +5,17 @@ module Q_learning_tb();
     reg clock;
     reg [3:0] action;
     reg [17:0] state, next_state; 
-    reg [7:0] reward, gamma, alfa;
-    wire [7:0] Q_new;
+    reg [15:0] reward, gamma, alfa;
+    wire [15:0] Q_new;
 
     Q_learning uut(.clock(clock), .action(action), .state(state), .next_state(next_state), 
                     .reward(reward), .gamma(gamma), .alfa(alfa), .Q_new(Q_new));
 
     initial begin
         clock = 1'd0;
-        reward = 8'd2;
-        gamma = 8'd2;
-        alfa = 8'd2;
+        reward = 16'd2;
+        gamma = 16'd2;
+        alfa = 16'd2;
         #100
         action = 4'd2;
         state = 18'b000000000000000000;

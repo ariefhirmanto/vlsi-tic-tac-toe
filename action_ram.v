@@ -4,8 +4,8 @@
 module action_ram(clock, write_enable, write_address, d_in, read_address, d_out);
     input write_enable, clock;
     input [17:0] read_address, write_address;
-    input [7:0] d_in;
-    output reg [7:0] d_out;
+    input [15:0] d_in;
+    output reg [15:0] d_out;
     // model memory
     reg [17:0] memory_data [0:255];
     integer i;

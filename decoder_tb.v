@@ -27,15 +27,15 @@ module decoder_tb();
     initial
     begin
         clock = 1'd0;
-        # 200 sel = 8'd0;
-        # 200 sel = 8'd1;
-        # 200 sel = 8'd2;
-        # 200 sel = 8'd3;
-        # 200 sel = 8'd4;
-        # 200 sel = 8'd5;
-        # 200 sel = 8'd6;
-        # 200 sel = 8'd7;
-        # 200 sel = 8'd8;       
+        # 200 sel = 16'd0;
+        # 200 sel = 16'd1;
+        # 200 sel = 16'd2;
+        # 200 sel = 16'd3;
+        # 200 sel = 16'd4;
+        # 200 sel = 16'd5;
+        # 200 sel = 16'd6;
+        # 200 sel = 16'd7;
+        # 200 sel = 16'd8;       
     end 
 
     always @(*)

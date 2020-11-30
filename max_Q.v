@@ -1,22 +1,22 @@
 module max_Q(input_1,input_2,input_3,input_4,input_5,input_6,input_7,input_8,input_9,keluaran);
-	input [7:0] input_1;
-	input [7:0] input_2;
-	input [7:0] input_3;
-	input [7:0] input_4;
-	input [7:0] input_5;
-	input [7:0] input_6;
-	input [7:0] input_7;
-	input [7:0] input_8;
-	input [7:0] input_9;
+	input [15:0] input_1;
+	input [15:0] input_2;
+	input [15:0] input_3;
+	input [15:0] input_4;
+	input [15:0] input_5;
+	input [15:0] input_6;
+	input [15:0] input_7;
+	input [15:0] input_8;
+	input [15:0] input_9;
 
-	wire [7:0] output_a;
-	wire [7:0] output_b;
-	wire [7:0] output_c;
-	wire [7:0] output_d;
-	wire [7:0] output_e;
-	wire [7:0] output_f;
-	wire [7:0] output_g;
-	output [7:0] keluaran;
+	wire [15:0] output_a;
+	wire [15:0] output_b;
+	wire [15:0] output_c;
+	wire [15:0] output_d;
+	wire [15:0] output_e;
+	wire [15:0] output_f;
+	wire [15:0] output_g;
+	output [15:0] keluaran;
 
 	max_modul inst_8(.in_1(input_9),.in_2(output_g),.out(keluaran));
 	max_modul inst_7(.in_1(output_e),.in_2(output_f),.out(output_g));
@@ -30,9 +30,9 @@ module max_Q(input_1,input_2,input_3,input_4,input_5,input_6,input_7,input_8,inp
 endmodule	
 
 module max_modul (in_1,in_2,out);
-	input [7:0] in_1;
-	input [7:0] in_2;
-	output [7:0] out;
+	input [15:0] in_1;
+	input [15:0] in_2;
+	output [15:0] out;
 	assign out = (in_1>in_2) ? in_1 : in_2;
 endmodule
 
