@@ -12,10 +12,10 @@ module policy_gen(Q_1, Q_2, Q_3, Q_4, Q_5, Q_6, Q_7, Q_8, Q_9, next_action);
     input [17:0] Q_8;
     input [17:0] Q_9;
     output [3:0] next_action;
-    reg [7:0] data_max;
+    wire [17:0] data_max;
     reg [3:0] temp_index; 
 
-    max_Q max_data(
+    max_Q_18bit max_data(
         .input_1(Q_1),
         .input_2(Q_2),
         .input_3(Q_3),
