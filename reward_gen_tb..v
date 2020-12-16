@@ -1,23 +1,23 @@
 module reward_gen_tb();
-    reg [17:0] current_state;
+    reg [1:0] game_state;
     wire [7:0] reward;
 
     reward_gen uut(
-        .current_state(current_state),
+        .game_state(game_state),
         .reward(reward)
     );
 
     initial
     begin
-        current_state = 18'd000000000000000000;
+        game_state = 00;
         #100
-        current_state = 18'd010101100110100110;
+        game_state = 01;
         #200
-        current_state = 18'd101010011001011001;
+        game_state = 11;
         #300
-        current_state = 18'd010101100110100110;
+        game_state = 10;
         #400
-        current_state = 18'd000000000000000000;
+        game_state = 00;
     end
 
 endmodule
