@@ -9,3 +9,4 @@ output [15:0] Q_new;
 assign Q_new = Q + alfa * (reward + (gamma * max_Q) - Q); 
 
 endmodule
+
