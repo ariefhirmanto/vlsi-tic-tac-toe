@@ -85,7 +85,7 @@ module controlunit(enable, clock, action, rst_policygen, outcome);
             else if (counter == 16'd100)
             begin
                 //
-                wr_en <=
+                // wr_en <= 
                 rst_policygen <= 1'd1;
                 tTable <= 18'd0;
             end
