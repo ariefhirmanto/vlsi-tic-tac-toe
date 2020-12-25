@@ -6,7 +6,7 @@ module Q_updater(Q, max_Q, gamma, alfa, reward, Q_new);
     input [15:0] Q, max_Q, gamma, alfa, reward;
     reg [15:0] eq_1; //eq_1 = gamma * maxQ
     reg [15:0] eq_2; //
-    reg [15:0] temp; 
+    wire [15:0] temp; 
     output [15:0] Q_new;
     
     barrelshifter bs_1(
@@ -21,7 +21,7 @@ module Q_updater(Q, max_Q, gamma, alfa, reward, Q_new);
         .bit_2(alfa[1]),
         .shifted(eq_2));
 
-    assign temp = eq_1 + reward - Q
+    assign temp = eq_1 + reward - Q;
     assign Q_new = Q + eq_2; //alfa * (reward + (gamma * max_Q) - Q); 
 
 endmodule

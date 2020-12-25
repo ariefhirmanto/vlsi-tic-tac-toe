@@ -31,8 +31,6 @@ module policy_gen(rst, Q_1, Q_2, Q_3, Q_4, Q_5, Q_6, Q_7, Q_8, Q_9, next_action)
 
     always @(*)
     begin
-        if(rst)
-        begin
             if (data_max == Q_1)
                 begin
                     temp_index <= 0;
@@ -69,7 +67,6 @@ module policy_gen(rst, Q_1, Q_2, Q_3, Q_4, Q_5, Q_6, Q_7, Q_8, Q_9, next_action)
                 begin
                     temp_index <= 8;
                 end 
-        end
     end
 
     assign next_action = temp_index;

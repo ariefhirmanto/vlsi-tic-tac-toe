@@ -1,8 +1,8 @@
-module controlunit(enable, clock, action, rst_policygen, outcome);
+module controlunit(enable, clock, action, rst_decoder, outcome);
     input enable;
     input clock;
     input [3:0] action;
-    output reg rst_policygen;
+    output reg rst_decoder;
     // 01 agent, 10 player
     output reg [1:0] outcome;
     reg [17:0] tTable;
@@ -30,7 +30,7 @@ module controlunit(enable, clock, action, rst_policygen, outcome);
         begin
             if (counter != 16'd0)
             begin
-                rst_policygen <= 1'd0;
+                rst_decoder <= 1'd0;
                 // learning agent won
                 if((tTable[1:0] == 2'd1 && tTable[9:8] == 2'd1 && tTable[17:16] == 2'd1) || 
                 (tTable[5:4] == 2'd1 && tTable[9:8] == 2'd1 && tTable[13:12] == 2'd1) || 
@@ -84,9 +84,8 @@ module controlunit(enable, clock, action, rst_policygen, outcome);
             end
             else if (counter == 16'd100)
             begin
-                //
-                // wr_en <= 
-                rst_policygen <= 1'd1;
+            
+                rst_decoder <= 1'd1;
                 tTable <= 18'd0;
             end
         end

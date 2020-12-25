@@ -1,5 +1,6 @@
-module decoder(sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
+module decoder(rst, sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
     input [3:0] sel;
+    input rst;
     output en1;
     output en2;
     output en3;
@@ -21,115 +22,118 @@ module decoder(sel, en1, en2, en3, en4, en5, en6, en7, en8, en9);
 
     always @(*)
     begin
-        case(sel)
-        16'd0: 
-            begin
-                en1 <= 1'd1;
-                en2 <= 1'd0;
-                en3 <= 1'd0;
-                en4 <= 1'd0;
-                en5 <= 1'd0;
-                en6 <= 1'd0;
-                en7 <= 1'd0;
-                en8 <= 1'd0;
-                en9 <= 1'd0;
-            end
-        16'd1: 
-            begin
-                en1 <= 1'd0;
-                en2 <= 1'd1;
-                en3 <= 1'd0;
-                en4 <= 1'd0;
-                en5 <= 1'd0;
-                en6 <= 1'd0;
-                en7 <= 1'd0;
-                en8 <= 1'd0;
-                en9 <= 1'd0;
-            end
-        16'd2: 
-            begin
-                en1 <= 1'd0;
-                en2 <= 1'd0;
-                en3 <= 1'd1;
-                en4 <= 1'd0;
-                en5 <= 1'd0;
-                en6 <= 1'd0;
-                en7 <= 1'd0;
-                en8 <= 1'd0;
-                en9 <= 1'd0;
-            end
-        16'd3: 
-            begin
-                en1 <= 1'd0;
-                en2 <= 1'd0;
-                en3 <= 1'd0;
-                en4 <= 1'd1;
-                en5 <= 1'd0;
-                en6 <= 1'd0;
-                en7 <= 1'd0;
-                en8 <= 1'd0;
-                en9 <= 1'd0;
-            end
-        16'd4: 
-            begin
-                en1 <= 1'd0;
-                en2 <= 1'd0;
-                en3 <= 1'd0;
-                en4 <= 1'd0;
-                en5 <= 1'd1;
-                en6 <= 1'd0;
-                en7 <= 1'd0;
-                en8 <= 1'd0;
-                en9 <= 1'd0;
-            end
-        16'd5: 
-            begin
-                en1 <= 1'd0;
-                en2 <= 1'd0;
-                en3 <= 1'd0;
-                en4 <= 1'd0;
-                en5 <= 1'd0;
-                en6 <= 1'd1;
-                en7 <= 1'd0;
-                en8 <= 1'd0;
-                en9 <= 1'd0;
-            end
-        16'd6: 
-            begin
-                en1 <= 1'd0;
-                en2 <= 1'd0;
-                en3 <= 1'd0;
-                en4 <= 1'd0;
-                en5 <= 1'd0;
-                en6 <= 1'd0;
-                en7 <= 1'd1;
-                en8 <= 1'd0;
-                en9 <= 1'd0;
-            end
-        16'd7: 
-            begin
-                en1 <= 1'd0;
-                en2 <= 1'd0;
-                en3 <= 1'd0;
-                en4 <= 1'd0;
-                en5 <= 1'd0;
-                en6 <= 1'd0;
-                en7 <= 1'd0;
-                en8 <= 1'd1;
-                en9 <= 1'd0;
-            end
-        16'd8: 
-            begin
-                en1 <= 1'd0;
-                en2 <= 1'd0;
-                en3 <= 1'd0;
-                en4 <= 1'd0;
-                en5 <= 1'd0;
-                en6 <= 1'd0;
-                en7 <= 1'd0;
-                en8 <= 1'd0;
-                en9 <= 1'd1;
-            end
-        endcase
+        if (!rst)
+        begin
+            case(sel)
+            16'd0: 
+                begin
+                    en1 <= 1'd1;
+                    en2 <= 1'd0;
+                    en3 <= 1'd0;
+                    en4 <= 1'd0;
+                    en5 <= 1'd0;
+                    en6 <= 1'd0;
+                    en7 <= 1'd0;
+                    en8 <= 1'd0;
+                    en9 <= 1'd0;
+                end
+            16'd1: 
+                begin
+                    en1 <= 1'd0;
+                    en2 <= 1'd1;
+                    en3 <= 1'd0;
+                    en4 <= 1'd0;
+                    en5 <= 1'd0;
+                    en6 <= 1'd0;
+                    en7 <= 1'd0;
+                    en8 <= 1'd0;
+                    en9 <= 1'd0;
+                end
+            16'd2: 
+                begin
+                    en1 <= 1'd0;
+                    en2 <= 1'd0;
+                    en3 <= 1'd1;
+                    en4 <= 1'd0;
+                    en5 <= 1'd0;
+                    en6 <= 1'd0;
+                    en7 <= 1'd0;
+                    en8 <= 1'd0;
+                    en9 <= 1'd0;
+                end
+            16'd3: 
+                begin
+                    en1 <= 1'd0;
+                    en2 <= 1'd0;
+                    en3 <= 1'd0;
+                    en4 <= 1'd1;
+                    en5 <= 1'd0;
+                    en6 <= 1'd0;
+                    en7 <= 1'd0;
+                    en8 <= 1'd0;
+                    en9 <= 1'd0;
+                end
+            16'd4: 
+                begin
+                    en1 <= 1'd0;
+                    en2 <= 1'd0;
+                    en3 <= 1'd0;
+                    en4 <= 1'd0;
+                    en5 <= 1'd1;
+                    en6 <= 1'd0;
+                    en7 <= 1'd0;
+                    en8 <= 1'd0;
+                    en9 <= 1'd0;
+                end
+            16'd5: 
+                begin
+                    en1 <= 1'd0;
+                    en2 <= 1'd0;
+                    en3 <= 1'd0;
+                    en4 <= 1'd0;
+                    en5 <= 1'd0;
+                    en6 <= 1'd1;
+                    en7 <= 1'd0;
+                    en8 <= 1'd0;
+                    en9 <= 1'd0;
+                end
+            16'd6: 
+                begin
+                    en1 <= 1'd0;
+                    en2 <= 1'd0;
+                    en3 <= 1'd0;
+                    en4 <= 1'd0;
+                    en5 <= 1'd0;
+                    en6 <= 1'd0;
+                    en7 <= 1'd1;
+                    en8 <= 1'd0;
+                    en9 <= 1'd0;
+                end
+            16'd7: 
+                begin
+                    en1 <= 1'd0;
+                    en2 <= 1'd0;
+                    en3 <= 1'd0;
+                    en4 <= 1'd0;
+                    en5 <= 1'd0;
+                    en6 <= 1'd0;
+                    en7 <= 1'd0;
+                    en8 <= 1'd1;
+                    en9 <= 1'd0;
+                end
+            16'd8: 
+                begin
+                    en1 <= 1'd0;
+                    en2 <= 1'd0;
+                    en3 <= 1'd0;
+                    en4 <= 1'd0;
+                    en5 <= 1'd0;
+                    en6 <= 1'd0;
+                    en7 <= 1'd0;
+                    en8 <= 1'd0;
+                    en9 <= 1'd1;
+                end
+            endcase
+        end
     end
 endmodule
