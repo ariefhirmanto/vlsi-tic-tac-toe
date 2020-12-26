@@ -158,7 +158,7 @@ module top_level(
     );
 
     // q_learning
-    wire Q_new_temp;
+    wire [15:0] Q_new_temp;
     Q_learning q_learning (
         .clock(clock), 
         .action(output_action_delay1), 

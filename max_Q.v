@@ -33,7 +33,7 @@ module max_modul (in_1,in_2,out);
 	input [15:0] in_1;
 	input [15:0] in_2;
 	output [15:0] out;
-	assign out = (in_1>in_2) ? in_1 : in_2;
+	assign out = (in_1>=in_2) ? in_1 : in_2;
 endmodule
 
 

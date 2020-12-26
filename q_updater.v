@@ -3,7 +3,8 @@
 
 module Q_updater(Q, max_Q, reward, Q_new);
     // misal gamma = 
-    input [15:0] Q, max_Q, reward;
+    input [15:0] Q, max_Q; 
+    input [7:0] reward;
     wire [15:0] eq_1; //eq_1 = gamma * maxQ
     wire [15:0] eq_2; //
     wire [15:0] temp; 

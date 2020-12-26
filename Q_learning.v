@@ -1,12 +1,28 @@
 // File     : Q_learning.v
 // Brief    : Q learning accelerator that combile all modul
 
-module Q_learning(clock, action, data_in1, data_in2, data_in3, data_in4, data_in5, data_in6, data_in7, data_in8, data_in9, reward, Q_new);
+module Q_learning(
+    clock, 
+    action, 
+    data_in1, 
+    data_in2, 
+    data_in3, 
+    data_in4, 
+    data_in5, 
+    data_in6, 
+    data_in7, 
+    data_in8, 
+    data_in9, 
+    reward, 
+    Q_new,
+    Q_max_debug,
+    Q_out_mux_debug   
+);
     //yg masuk memori
     // yg baru
     input clock;
     input [3:0] action;
-    input [15:0] reward;
+    input [7:0] reward;
     input [15:0] data_in1; //bikin 9
     input [15:0] data_in2;
     input [15:0] data_in3;
@@ -17,6 +33,8 @@ module Q_learning(clock, action, data_in1, data_in2, data_in3, data_in4, data_in
     input [15:0] data_in8;
     input [15:0] data_in9;
     output [15:0] Q_new;
+    output [15:0] Q_max_debug;
+    output [15:0] Q_out_mux_debug;
     // action di decode trus masuk memori
     
     // sebelumnya
@@ -28,7 +46,7 @@ module Q_learning(clock, action, data_in1, data_in2, data_in3, data_in4, data_in
 
     // modul decoder
     // wire en1, en2, en3, en4, en5, en6, en7, en8, en9;
-    wire [15:0] Q_new_temp;
+    // wire [15:0] Q_new_temp;
 
     // decoder decoder_0 (.sel(action), .en1(en1), .en2(en2), .en3(en3), .en4(en4), 
     //                     .en5(en5), .en6(en6), .en7(en7), .en8(en8), .en9(en9)
@@ -95,10 +113,12 @@ module Q_learning(clock, action, data_in1, data_in2, data_in3, data_in4, data_in
     );
 
     // Q_updater 
+    wire [15:0] Q_new_temp; 
     Q_updater Q_updater_0 (.Q(Q_out_mux), .max_Q(Q_max), 
-                            .reward(reward), .Q_new(Q_new_temp)
+                            .reward(reward), .Q_new(Q_new)
     );
 
     assign Q_new = Q_new_temp;
-                
+    assign Q_max_debug = Q_max;
+    assign Q_out_mux_debug = Q_out_mux;
 endmodule
