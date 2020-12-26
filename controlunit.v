@@ -1,22 +1,30 @@
-module controlunit(enable, clock, action, rst_decoder, outcome);
+module controlunit(enable, clock, agent_action, user_action, state, rst_decoder, en_stateindex, en_switch_action, state_output, action_output, output_training, counter);
     input enable;
     input clock;
-    input [3:0] action;
+    input [3:0] agent_action;
+    input [3:0] user_action;
+    input [17:0] state;
+    output reg en_switch_action;
     output reg rst_decoder;
+    output reg en_stateindex;
+    output reg output_training;
     // 01 agent, 10 player
-    output reg [1:0] outcome;
-    reg [17:0] tTable;
-    reg [15:0] counter;
+    output [17:0] state_output;
+    output [3:0] action_output;
+    output [15:0] counter;
+    reg [15:0] counter_temp;
+    reg [3:0] temp_action;
+    reg [17:0] temp_state;
 
     always @(posedge clock)
     begin
         if (!enable)
         begin
-            counter <= 16'd0;
+            counter_temp <= 16'd0;
         end
         else
         begin
-            counter <= counter + 16'd1;
+            counter_temp <= counter_temp + 16'd1;
         end
     end
 
@@ -24,70 +32,39 @@ module controlunit(enable, clock, action, rst_decoder, outcome);
     begin
         if (!enable)
         begin
-            tTable <= 18'd0;
+            temp_state <= state;
+            output_training <= 1'd0;
+            rst_decoder <= 1'd1;
+            en_stateindex <= 1'd0;
         end
         else
         begin
-            if (counter != 16'd0)
+            temp_state <= state;
+            if (counter_temp <= 16'd16)
             begin
+                output_training <= 1'd1;
                 rst_decoder <= 1'd0;
-                // learning agent won
-                if((tTable[1:0] == 2'd1 && tTable[9:8] == 2'd1 && tTable[17:16] == 2'd1) || 
-                (tTable[5:4] == 2'd1 && tTable[9:8] == 2'd1 && tTable[13:12] == 2'd1) || 
-                    (tTable[1:0] == 2'd1 && tTable[3:2] == 2'd1 && tTable[5:4] == 2'd1) || 
-                        (tTable[7:6] == 2'd1 && tTable[9:8] == 2'd1 && tTable[11:10] == 2'd1) || 
-                            (tTable[13:12] == 2'd1 && tTable[15:14] == 2'd1 && tTable[17:16] == 2'd1) || 
-                                (tTable[1:0] == 2'd1 && tTable[7:6] == 2'd1 && tTable[13:12] == 2'd1) || 
-                                    (tTable[3:2] == 2'd1 && tTable[9:8] == 2'd1 && tTable[15:14] == 2'd1) || 
-                                        (tTable[5:4] == 2'd1 && tTable[11:10] == 2'd1 && tTable[17:16] == 2'd1))
-                    begin
-                        tTable <= 18'd0;
-                        outcome <= 01;
-                    end
-                // learning agent lose
-                else if((tTable[1:0] == 2'd2 && tTable[9:8] == 2'd2 && tTable[17:16] == 2'd2) || 
-                    (tTable[5:4] == 2'd2 && tTable[9:8] == 2'd2 && tTable[13:12] == 2'd2) || 
-                        (tTable[1:0] == 2'd2 && tTable[3:2] == 2'd2 && tTable[5:4] == 2'd2) || 
-                            (tTable[7:6] == 2'd2 && tTable[9:8] == 2'd2 && tTable[11:10] == 2'd2) || 
-                                (tTable[13:12] == 2'd2 && tTable[15:14] == 2'd2 && tTable[17:16] == 2'd2) || 
-                                    (tTable[1:0] == 2'd2 && tTable[7:6] == 2'd2 && tTable[13:12] == 2'd2) || 
-                                        (tTable[3:2] == 2'd2 && tTable[9:8] == 2'd2 && tTable[15:14] == 2'd2) || 
-                                            (tTable[5:4] == 2'd2 && tTable[11:10] == 2'd2 && tTable[17:16] == 2'd2))
-                    begin
-                        tTable <= 18'd0;
-                        outcome <= 10;
-                    end
-                // match draw
-                else if (!((tTable[1:0] == 2'd0) || (tTable[3:2] == 2'd0) || (tTable[5:4] == 2'd0) ||
-                            (tTable[7:6] == 2'd0) || (tTable[9:8] == 2'd0) || (tTable[11:10] == 2'd0) ||
-                            (tTable[13:12] == 2'd0) || (tTable[15:14] == 2'd0) || (tTable[17:16] == 2'd0))) 
-                    begin
-                        tTable <= 18'd0;
-                        outcome <= 11;
-                    end
-                // continue
+                en_stateindex <= 1'd1;
+                if (counter_temp % 2 == 1)
+                begin
+                    en_switch_action <= 1'd1;
+                    temp_action <= agent_action;
+                end
                 else
-                    begin
-                        outcome <= 00;
-                        case (action)
-                            action == 4'd0: tTable[1:0] <= 01;
-                            action == 4'd1: tTable[3:2] <= 01;
-                            action == 4'd2: tTable[5:4] <= 01;
-                            action == 4'd3: tTable[7:6] <= 01;
-                            action == 4'd4: tTable[9:8] <= 01;
-                            action == 4'd5: tTable[11:10] <= 01;
-                            action == 4'd6: tTable[13:12] <= 01;
-                            action == 4'd7: tTable[15:14] <= 01;
-                            action == 4'd8: tTable[17:16] <= 01;
-                        endcase
-                    end 
+                begin
+                    en_switch_action <= 1'd0;
+                    temp_action <= user_action;
+                end
             end
-            else if (counter == 16'd100)
+            else 
             begin
-            
+                output_training <= 1'd0;
                 rst_decoder <= 1'd1;
-                tTable <= 18'd0;
+                en_stateindex <= 1'd0;
             end
         end
     end
+    assign state_output = temp_state;
+    assign action_output = temp_action;
+    assign counter = counter_temp;
 endmodule

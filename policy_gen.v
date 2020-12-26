@@ -1,22 +1,21 @@
 // File     : policy_gen.v
 // Brief    : module that determine next action / a(t+1) based on Q table
 
-module policy_gen(rst, Q_1, Q_2, Q_3, Q_4, Q_5, Q_6, Q_7, Q_8, Q_9, next_action);
-    input rst;
-    input [17:0] Q_1;
-    input [17:0] Q_2;
-    input [17:0] Q_3;
-    input [17:0] Q_4;
-    input [17:0] Q_5;
-    input [17:0] Q_6;
-    input [17:0] Q_7;
-    input [17:0] Q_8;
-    input [17:0] Q_9;
+module policy_gen(Q_1, Q_2, Q_3, Q_4, Q_5, Q_6, Q_7, Q_8, Q_9, next_action);
+    input [15:0] Q_1;
+    input [15:0] Q_2;
+    input [15:0] Q_3;
+    input [15:0] Q_4;
+    input [15:0] Q_5;
+    input [15:0] Q_6;
+    input [15:0] Q_7;
+    input [15:0] Q_8;
+    input [15:0] Q_9;
     output [3:0] next_action;
-    wire [17:0] data_max;
+    wire [15:0] data_max;
     reg [3:0] temp_index; 
 
-    max_Q_18bit max_data(
+    max_Q max_data(
         .input_1(Q_1),
         .input_2(Q_2),
         .input_3(Q_3),
@@ -28,6 +27,11 @@ module policy_gen(rst, Q_1, Q_2, Q_3, Q_4, Q_5, Q_6, Q_7, Q_8, Q_9, next_action)
         .input_9(Q_9),
         .keluaran(data_max)
     );
+
+    initial
+    begin
+        temp_index <= 4'd0;
+    end
 
     always @(*)
     begin
